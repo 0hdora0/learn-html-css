@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <title>video 관련 요소</title>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a>
+    <h1>video 관련 요소</h1>
+
+    <video controls autoplay muted poster="/src/assets/video/poster.jpg">
+      <source src="/src/assets/video/google-developer-stories.webm" type="video/webm" />
+      <source src="/src/assets/video/google-developer-stories.ogg" type="video/ogg" />
+      <source src="/src/assets/video/google-developer-stories.mov" type="video/mov" />
+      <source src="/src/assets/video/google-developer-stories.mp4" type="video/mp4" />
+      <!-- 소스태그를 지우고 소스태그에 있던 영상 경로를 비디오태그에 그대로 부여해주면 똑같은 결과의 코드 -->
+      <track src="/src/assets/video/stories-en.vtt" kind="captions" srclang="en" label="English Caption" />
+    </video>
+    <hr />
+    <video src="/src/assets/video/google-developer-stories.mp4" controls autoplay muted poster="/src/assets/video/poster.jpg">
+      <track src="/src/assets/video/stories-en.vtt" kind="captions" srclang="en" label="English Caption" />
+    </video>
+    <!-- controls:컨트롤 할 수 있는 메뉴 삽입,
+     autoplay속성을 넣어도 자동재생 되지 않음. 접근성 때문에 그렇고, 음소거 했을 때는 자동재생 됨.
+     mured poster: 썸네일 -->
+    <!-- 비디오는 피규어태그 안에도 쓸 수 있음 -->
+  </body>
+</html>
