@@ -1,0 +1,32 @@
+/* 본문의 기본 여백 설정 */
+body {
+  margin: 20px;
+  color: grey;
+}
+
+/* 상속 */
+a {
+  color: inherit;
+}
+/* p, strong, span을 선택한 게 아니라 wrapper를 선택했지만 상속된 단락 전체가 변화 함. */
+/* 상속이 되는 요소가 있고 되지 않는 요소가 있음. */
+.wrapper {
+  color: purple;
+  border: 1px solid green;
+}
+
+/* 겹침 */
+/* 상속된 것과 겹쳐있기 때문에 아래의 p 컬러로 바뀌게 되고, 더 높은 우선순위인 그 아래의 .like 컬러로 비뀌게 됨.
+p가 p.like가 되면 .like가 아닌 p.like 컬러로 바뀜. .like를 .wrapper .like로 변경하면 다시 그 레드로 바뀜.
+p.like를 .wrapper p.like로 변경하면 다시 블루로 바뀜. .wrapper .like를 #coding.wrapper .like로 변경하면 다시 레드로 바뀜.
+만약 둘 다 #coding.wrapper p.like로 변경하여 값이 같아지면 아래쪽에 있는 컬러인 레드로 변경이 됨.
+이 상태에서 블루컬러로 변경하고 싶으면 h1 + #coding.wrapper p.like로 변경하면 됨.
+이렇게 html문서상 위쪽으로 계속 올라가면서 추가해주면 우선순위가 올라 감. */
+body a + h1 + #coding.wrapper p.like {
+  color: blue;
+}
+
+a + h1 + #coding.wrapper p.like {
+  color: red;
+  /* color: red !important; */
+}
