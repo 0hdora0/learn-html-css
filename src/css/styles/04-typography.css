@@ -1,0 +1,25 @@
+body {
+  margin: 20px;
+}
+
+/* 글꼴 */
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* 글자 크기 */
+.wrapper {
+  font-size: 20px;
+}
+
+/* 아래의 코드를 넣음으로써 폰트 사이즈가 20pxX1.5X1.5인 45px로 변경이 됨. */
+.wrapper blockquote {
+  font-size: 1.5em;
+}
+
+/* 부모가 가진 20px에 X1.5를 한 것(30px)이 1.5em임. */
+/* em을 rem으로 바꾸면 루트인 html의 기본 글자크기인 16px에X1.5를 한 24px이 됨. */
+/* vw: 화면 창 크기에 반응하여 폰트 크기가 변함. */
+.like {
+  font-size: 5vw;
+}
