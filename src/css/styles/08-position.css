@@ -1,0 +1,89 @@
+body {
+  margin: 20px;
+}
+
+.wrapper {
+  width: 500px;
+  border: 2px solid red;
+  position: relative;
+}
+
+/* position : relative */
+.like {
+  background-color: #ffc;
+  /* relative는 내가 원래 있던 자리가 기준 */
+  position: relative;
+  left: 50px;
+  bottom: 20px;
+}
+
+/* 위의 position&left와 아래의 margin-left&margin-right는 같은 결과는 낳는다.
+다만, 아래의 방법으로 하면 추후 문제를 야기할 수도 있음. */
+
+.lion {
+  background-color: #cff;
+  margin-left: 50px;
+  margin-right: -50px;
+}
+
+/* position : absolute */
+
+.bootcamp {
+  background-color: #fcf;
+  position: absolute;
+  /* 앱솔루트는 포지션이 스태틱이 아닌 상위 컨테이닝 블록이 기준 */
+  left: 50px;
+  top: 100px;
+}
+
+/* position: fixed */
+.school {
+  background-color: #cff;
+  /* fixed는 viewport를 기준으로 배치 */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+/* position: sticky */
+/* sticky는 relative와 fixed의 장점을 결합한 요소 */
+h1 {
+  background-color: #cfc;
+  position: sticky;
+  top: 0;
+  /* z-index는 꼭 좀 더 찾아보기 */
+  z-index: 10;
+}
+
+/* z-index 속성 */
+/* z-index의 기본값은 auto임. */
+.frontend,
+.euid {
+  position: relative;
+  padding: 10px;
+}
+
+.frontend {
+  background-color: yellow;
+  left: 50px;
+  top: 20px;
+  z-index: 1;
+}
+
+.euid {
+  background-color: orange;
+}
+
+.container {
+  background-color: #000;
+  margin-top: 50px;
+
+  p {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid currentColor;
+    position: relative;
+    top: -5px;
+    left: -5px;
+  }
+}
