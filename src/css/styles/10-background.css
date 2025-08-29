@@ -1,0 +1,26 @@
+body {
+  margin: 20px;
+}
+
+/* 배경 스타일링 */
+/* body {
+  /* background-color: #ffc;
+  /* 마크업에서는 가장 나중에 선언한 것이 맨 위로 올라오지만, 배경은 반대라서 순차적으로 앞부터 뒤로 나타남. */
+/* background-image: url(/src/assets/images/sun.png), url(/src/assets/images/cloud.png);
+  /* repeat-x: x축 반복, repeat-y: y축 반복
+  background-repeat: no-repeat, repeat-x;
+  background-size:
+    100px 100px,
+    200px 150px;
+  background-position: 50% 30%;
+  background-attachment: fixed;
+} */
+
+/*background 속성으로 축약해서 표현하기 */
+body {
+  background:
+  /* 50% 30% / 100px 100px 에서 앞 50% 30%는 백그라운드 사이즈, 뒤 100px 100px은 백그라운드 포지션 */
+    url(/src/assets/images/sun.png) no-repeat 50% 30% /100px 100px fixed,
+    url(/src/assets/images/cloud.png) no-repeat 50% 30% /200px 150px fixed,
+    #ffc;
+}
