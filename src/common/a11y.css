@@ -1,1 +1,15 @@
 /* 접근성 관련 CSS */
+.sr-only {
+  position: absolute;
+  /* width, height는 가상커서가 인식할 수 있도록 필요가 없더라도 최소 크기를 부여해야 함. */
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+  /* display: none은 사용하면 안 됨. */
+}
