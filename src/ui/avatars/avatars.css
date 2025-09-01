@@ -49,6 +49,8 @@ body {
   padding: 0;
   border: 0 none;
   position: relative;
+  /* base와 bottom 사이의 갭 없애기 */
+  vertical-align: top;
 
   --size: 64px;
 
@@ -70,13 +72,12 @@ body {
     height: 28.125%;
     border-radius: 50%;
     border: 2px solid #fff;
-    background-color: red;
     position: absolute;
     right: 0;
     bottom: 0;
     /* position: absolute;
-    right: 0;
-    bottom: 0; */
+      right: 0;
+      bottom: 0; */
   }
 
   /*.avatar-button[aria-label='online']::after에서 .avatar-button을 &로 치환한 것. */
@@ -86,5 +87,22 @@ body {
 
   &[aria-label='offline']::after {
     background-color: #dbdbdb;
+  }
+}
+
+/* 아바타 레이아웃 */
+.avatar-list {
+  background-color: #ffc;
+  display: flow-root;
+  padding: 10px 30px;
+
+  width: 400px;
+  border: 2px solid red;
+
+  li {
+    /* float: left; */
+    /* margin이 겹칠 때는 normal 상태일 때이고, float가 들어갔을 때는 겹치지 않음. */
+    float: left;
+    margin: 10px;
   }
 }
