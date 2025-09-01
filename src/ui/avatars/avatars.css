@@ -1,0 +1,43 @@
+body {
+  margin: 20px;
+}
+
+/* 아바타 컴포넌트 */
+.avatar-img {
+  /* 영역이 잘 선택되었는지 확인하는 방법 - 배경 또는 박스 그림자 */
+  background-color: #ffc;
+
+  --size: 64px;
+
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* border-radius는 속기법 (원래는 top-lef, top-right이런 식으로 다 주어야 함. */
+  }
+
+  /* span을 요소처럼 쓰는 것보다 class를 쓰는 게 안전할 수 있음. */
+  /* span같은 인라인요소는 width height 무시 함. display: block 주어야 함. */
+  span {
+    display: block;
+    width: 28.125%;
+    height: 28.125%;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .on {
+    background-color: #4cfe88;
+  }
+
+  .off {
+    background-color: #dbdbdb;
+  }
+}
