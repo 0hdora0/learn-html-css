@@ -1,0 +1,21 @@
+@property --text-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #f0c;
+}
+
+body {
+  margin: 20px;
+  color: var(--text-color);
+}
+
+div {
+  --text-color: #00f;
+
+  color: var(--text-color);
+
+  /* 초기값은 f0c이고 00f로 갱신한 거임. 상속받지  못하기 때문에 초기값으로 색이 나오는 것 */
+  p {
+    color: var(--text-color);
+  }
+}
