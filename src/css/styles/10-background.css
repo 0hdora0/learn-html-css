@@ -20,7 +20,26 @@ body {
 body {
   background:
   /* 50% 30% / 100px 100px 에서 앞 50% 30%는 백그라운드 사이즈, 뒤 100px 100px은 백그라운드 포지션 */
-    url(/src/assets/images/sun.png) no-repeat 50% 30% /100px 100px fixed,
-    url(/src/assets/images/cloud.png) no-repeat 50% 30% /200px 150px fixed,
+    url('/src/assets/images/sun.png') no-repeat 50% 30% /100px 100px fixed,
+    url('/src/assets/images/cloud.png') no-repeat 50% 30% /200px 150px fixed,
     #ffc;
+}
+
+/* linear gradient */
+.like {
+  margin-top: 50px;
+  background-color: pink;
+  background-image: linear-gradient(to bottom, red, green);
+}
+
+.lion {
+  margin-top: 50px;
+  background-color: pink;
+  background-image: linear-gradient(to top, red 30%, green 30%);
+}
+
+.bootcamp {
+  margin-top: 50px;
+  background-color: pink;
+  background-image: linear-gradient(-45deg, red, green);
 }
