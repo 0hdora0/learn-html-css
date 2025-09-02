@@ -1,0 +1,57 @@
+body {
+  margin: 20px;
+}
+
+/* 컴포넌트 */
+/* .term {
+  background-color: rgba(172, 172, 166, 0.354);
+
+  .subject {
+    font-size: 14px;
+    font-weight: 600;
+    color: #296897;
+    margin: 0 0 0 90px;
+    padding: 50px;
+  }
+
+  .thumbnail {
+    margin: 0 16px 100px 15px;
+  }
+
+  .description {
+    font-size: 14px;
+    margin: 0 0 0 100px;
+  }
+} */
+
+.term {
+  --accent-color: #296897;
+  --text-size: 1rem;
+
+  display: flow-root;
+  font-size: var(--text-size);
+  /* width: 218px; */
+
+  .subject {
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 1.2em;
+    /* width: 142px; */
+  }
+
+  .subject,
+  .description {
+    float: right;
+    width: calc(100% - 76px);
+  }
+
+  .thumbnail {
+    float: left;
+    margin-right: 16px;
+  }
+
+  .description {
+    margin-top: 10px;
+    font-size: 1em;
+  }
+}
