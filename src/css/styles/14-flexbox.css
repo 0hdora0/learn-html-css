@@ -12,8 +12,10 @@ body {
   /* flex-direction: row;
   flex-wrap: nowrap; */
   flex-flow: row nowrap;
+  /* 메인 축 정렬*/
   justify-content: end;
-  align-items: start;
+  /* 교차 축 정렬*/
+  align-items: center;
 
   > div {
     inline-size: 200px;
