@@ -1,0 +1,76 @@
+body {
+  margin: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  margin-block-end: 20px;
+}
+
+.members-wrapper {
+  block-size: 500px;
+  overflow: auto;
+
+  table {
+    border: 1px solid var(--black);
+    width: 100%;
+    /* border-collapse: collapse; */
+    border-spacing: 0;
+  }
+
+  .number {
+    inline-size: 10%;
+  }
+
+  .name {
+    inline-size: 20%;
+  }
+
+  .email {
+    inline-size: 30%;
+  }
+
+  .phone {
+    inline-size: 40%;
+  }
+
+  thead tr,
+  tfoot tr {
+    background: var(--black);
+    color: var(--white);
+  }
+
+  tbody tr:nth-child(even) {
+    background: var(--gray);
+  }
+
+  thead tr {
+    position: sticky;
+    top: 0;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    text-align: center;
+    /* px: 폰트 사이즈에 구애받음. em: 폰트 사이즈에 구애받지 않음. */
+    padding: 0.5em 1em;
+  }
+}
+
+/* tbody tr:nth-child(odd) {
+  background-color: var(--white);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--gray);
+}
+
+thead {
+  background: var(--black);
+  color: var(--white);
+} */
