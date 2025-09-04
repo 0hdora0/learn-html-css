@@ -58,9 +58,33 @@ body {
 
 /* 레이아웃 */
 .notification-wrapper {
-  background: #ffc;
+  border: 1px solid red;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 30px;
+}
+
+@media all and (min-width: 601px) {
+  .notification-wrapper {
+    --gap: 20px;
+
+    flex-flow: row wrap;
+    column-gap: var(--gap);
+
+    .notification {
+      /* flex: 1 1 0; */
+      inline-size: calc(50% - (var(--gap) / 2));
+    }
+  }
+}
+
+@media all and (min-width: 1001px) {
+  .notification-wrapper {
+    flex-wrap: nowrap;
+  }
 
   .notification {
-    --point-color: red;
+    /* flex: 1 1 0; */
+    inline-size: calc(25% - (var(--gap) / 2));
   }
 }
