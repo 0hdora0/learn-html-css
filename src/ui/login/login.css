@@ -153,3 +153,8 @@ body {
     }
   }
 }
+
+/* 링크 텍스트 */
+.textlink-new {
+  font-weight: 700;
+}
